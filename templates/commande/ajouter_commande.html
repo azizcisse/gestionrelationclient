@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h1>Ajouter Une Commande</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit" name="Ajouter" class="btn btn-sm btn-success">
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container w-50 text-center mt-5">
+    <h4>Etes Vous Sur de Vouloir Supprimer cette Commande?</h4>
+
+    <form action="{% url 'supprimer_commande' item.id %}" method="POST">
+        {% csrf_token %}
+        <a class="btn btn-warning" href="{% url 'accueil' %}">Annuler</a>
+
+        <input class="btn btn-danger" type="submit" name="Oui">
+    </form>
+</div>
+
+{% endblock content %}
